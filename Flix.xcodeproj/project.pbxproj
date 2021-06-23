@@ -16,6 +16,7 @@
 		70BA3C4A2683902700A2DF58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C492683902700A2DF58 /* main.m */; };
 		70BA3C542683902700A2DF58 /* FlixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C532683902700A2DF58 /* FlixTests.m */; };
 		70BA3C5F2683902700A2DF58 /* FlixUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C5E2683902700A2DF58 /* FlixUITests.m */; };
+		70BA3C6E26839B4700A2DF58 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		70BA3C5A2683902700A2DF58 /* FlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BA3C5E2683902700A2DF58 /* FlixUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixUITests.m; sourceTree = "<group>"; };
 		70BA3C602683902700A2DF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
+		70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				70BA3C452683902700A2DF58 /* LaunchScreen.storyboard */,
 				70BA3C482683902700A2DF58 /* Info.plist */,
 				70BA3C492683902700A2DF58 /* main.m */,
+				70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */,
+				70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			files = (
 				70BA3C3F2683902600A2DF58 /* ViewController.m in Sources */,
 				70BA3C392683902600A2DF58 /* AppDelegate.m in Sources */,
+				70BA3C6E26839B4700A2DF58 /* MoviesViewController.m in Sources */,
 				70BA3C4A2683902700A2DF58 /* main.m in Sources */,
 				70BA3C3C2683902600A2DF58 /* SceneDelegate.m in Sources */,
 			);
