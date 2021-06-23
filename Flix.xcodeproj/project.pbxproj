@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		70BA3C392683902600A2DF58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C382683902600A2DF58 /* AppDelegate.m */; };
 		70BA3C3C2683902600A2DF58 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C3B2683902600A2DF58 /* SceneDelegate.m */; };
-		70BA3C3F2683902600A2DF58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C3E2683902600A2DF58 /* ViewController.m */; };
 		70BA3C422683902600A2DF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BA3C402683902600A2DF58 /* Main.storyboard */; };
 		70BA3C442683902700A2DF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BA3C432683902700A2DF58 /* Assets.xcassets */; };
 		70BA3C472683902700A2DF58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BA3C452683902700A2DF58 /* LaunchScreen.storyboard */; };
@@ -42,8 +41,6 @@
 		70BA3C382683902600A2DF58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		70BA3C3A2683902600A2DF58 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		70BA3C3B2683902600A2DF58 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		70BA3C3D2683902600A2DF58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		70BA3C3E2683902600A2DF58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		70BA3C412683902600A2DF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70BA3C432683902700A2DF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BA3C462683902700A2DF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,19 +104,18 @@
 		70BA3C362683902600A2DF58 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
+				70BA3C7126839C3400A2DF58 /* Models */,
+				70BA3C7026839C2C00A2DF58 /* Views */,
+				70BA3C6F26839C2500A2DF58 /* View Controllers */,
 				70BA3C372683902600A2DF58 /* AppDelegate.h */,
 				70BA3C382683902600A2DF58 /* AppDelegate.m */,
 				70BA3C3A2683902600A2DF58 /* SceneDelegate.h */,
 				70BA3C3B2683902600A2DF58 /* SceneDelegate.m */,
-				70BA3C3D2683902600A2DF58 /* ViewController.h */,
-				70BA3C3E2683902600A2DF58 /* ViewController.m */,
 				70BA3C402683902600A2DF58 /* Main.storyboard */,
 				70BA3C432683902700A2DF58 /* Assets.xcassets */,
 				70BA3C452683902700A2DF58 /* LaunchScreen.storyboard */,
 				70BA3C482683902700A2DF58 /* Info.plist */,
 				70BA3C492683902700A2DF58 /* main.m */,
-				70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */,
-				70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -140,6 +136,29 @@
 				70BA3C602683902700A2DF58 /* Info.plist */,
 			);
 			path = FlixUITests;
+			sourceTree = "<group>";
+		};
+		70BA3C6F26839C2500A2DF58 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */,
+				70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		70BA3C7026839C2C00A2DF58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70BA3C7126839C3400A2DF58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70BA3C3F2683902600A2DF58 /* ViewController.m in Sources */,
 				70BA3C392683902600A2DF58 /* AppDelegate.m in Sources */,
 				70BA3C6E26839B4700A2DF58 /* MoviesViewController.m in Sources */,
 				70BA3C4A2683902700A2DF58 /* main.m in Sources */,
