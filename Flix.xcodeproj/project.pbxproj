@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		703FF8832683D033000B3014 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF8822683D033000B3014 /* DetailsViewController.m */; };
+		709AC307268515C50098E392 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC306268515C50098E392 /* MoviesGridViewController.m */; };
+		709AC30A268517650098E392 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC309268517650098E392 /* MovieCollectionCell.m */; };
 		70BA3C392683902600A2DF58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C382683902600A2DF58 /* AppDelegate.m */; };
 		70BA3C3C2683902600A2DF58 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BA3C3B2683902600A2DF58 /* SceneDelegate.m */; };
 		70BA3C422683902600A2DF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BA3C402683902600A2DF58 /* Main.storyboard */; };
@@ -47,6 +49,10 @@
 		58951B5DBDEBDDED38BD059C /* Pods_Flix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		703FF8812683D033000B3014 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		703FF8822683D033000B3014 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		709AC305268515C50098E392 /* MoviesGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesGridViewController.h; sourceTree = "<group>"; };
+		709AC306268515C50098E392 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
+		709AC308268517650098E392 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MovieCollectionCell.h; path = Flix/MovieCollectionCell.h; sourceTree = SOURCE_ROOT; };
+		709AC309268517650098E392 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MovieCollectionCell.m; path = Flix/MovieCollectionCell.m; sourceTree = SOURCE_ROOT; };
 		70BA3C342683902600A2DF58 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BA3C372683902600A2DF58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		70BA3C382683902600A2DF58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 				703FF8812683D033000B3014 /* DetailsViewController.h */,
 				70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */,
 				70BA3C6D26839B4700A2DF58 /* MoviesViewController.m */,
+				709AC305268515C50098E392 /* MoviesGridViewController.h */,
+				709AC306268515C50098E392 /* MoviesGridViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -175,6 +183,8 @@
 		70BA3C7026839C2C00A2DF58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				709AC308268517650098E392 /* MovieCollectionCell.h */,
+				709AC309268517650098E392 /* MovieCollectionCell.m */,
 				70BA3C722683C39300A2DF58 /* MovieCell.h */,
 				70BA3C732683C39300A2DF58 /* MovieCell.m */,
 			);
@@ -452,8 +462,10 @@
 				70BA3C742683C39300A2DF58 /* MovieCell.m in Sources */,
 				70BA3C6E26839B4700A2DF58 /* MoviesViewController.m in Sources */,
 				703FF8832683D033000B3014 /* DetailsViewController.m in Sources */,
+				709AC30A268517650098E392 /* MovieCollectionCell.m in Sources */,
 				70BA3C4A2683902700A2DF58 /* main.m in Sources */,
 				70BA3C3C2683902600A2DF58 /* SceneDelegate.m in Sources */,
+				709AC307268515C50098E392 /* MoviesGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
