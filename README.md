@@ -35,20 +35,22 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Change the CollectionView tab of the app to filter based on genre, instead of only displaying the same movies as the Now Playing tab. 
+2. Add a list of locations in which each movie can be watched, such as nearby theaters. 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/iB0gJnN' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Kap](https://getkap.co/).
+GIF created with [EZGif.com](https://ezgif.com/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+- UIActivityIndicatorView was not displaying when fetching movie data because it was placed below the movie cells in the table, which did not show up on screen. 
+- UIActivityIndicatorView took up space in the view instead of popping up, which was resolved by moving it outside of the TableView. 
 
 ## Credits
 
@@ -58,7 +60,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2021 Felianne Teng
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
