@@ -93,7 +93,14 @@
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
-//    cell.textLabel.text = movie[@"title"];
+    [cell.posterView.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [cell.posterView.layer setBorderWidth:3.0];
+    
+    NSString *backdropURLString = movie[@"backdrop_path"];
+    NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
+    
+    NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
+    [cell.backdropView setImageWithURL:backdropURL];
     
     return cell;
 }

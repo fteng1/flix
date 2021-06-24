@@ -40,6 +40,9 @@
     
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
+    
+    [self.posterView.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.posterView.layer setBorderWidth:3.0];
 }
 
 /*
