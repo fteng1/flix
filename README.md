@@ -44,7 +44,14 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![](https://i.imgur.com/M4DJdik.gif)
+Now Playing:
+![](https://i.imgur.com/wEbFEF8.gif)
+
+Browse:
+![](https://i.imgur.com/nalcNd2.gif)
+
+Favorites: 
+![](https://i.imgur.com/dSrJjnF.gif)
 
 GIF created with [EZGif.com](https://ezgif.com/).
 
