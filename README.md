@@ -45,7 +45,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 Now Playing:
-![](https://i.imgur.com/wEbFEF8.gif)
+![](https://i.imgur.com/EI0xa48.gif)
 
 Browse:
 ![](https://i.imgur.com/nalcNd2.gif)
