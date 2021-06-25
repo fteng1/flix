@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
+@property (weak, nonatomic) IBOutlet UIButton *savedButton;
 
 @end
 
@@ -61,6 +62,47 @@
     
     [self.posterView.layer setBorderColor:[UIColor whiteColor].CGColor];
     [self.posterView.layer setBorderWidth:1.0];
+    
+    // change image based on whether button is selected or not
+    [self.savedButton setImage:[UIImage systemImageNamed:@"star.fill"] forState:UIControlStateSelected];
+    [self.savedButton setImage:[UIImage systemImageNamed:@"star"] forState:UIControlStateNormal];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *saved = [defaults objectForKey:@"savedMovies"];
+    if (saved != nil) {
+        if ([saved containsObject:self.movie]) {
+            self.savedButton.selected = true;
+        }
+        else {
+            self.savedButton.selected = false;
+        }
+    }
+    else {
+        [defaults setObject:[[NSArray alloc] init] forKey:@"savedMovies"];
+    }
+    [defaults synchronize];
+}
+
+// change button to selected/not selected on tap
+- (IBAction)onTap:(id)sender {
+    self.savedButton.selected = !self.savedButton.selected;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (self.savedButton.selected) {
+        // save movie to saved movies
+        NSArray *saved = [defaults objectForKey:@"savedMovies"];
+        NSMutableArray *added = nil;
+        added = [NSMutableArray arrayWithArray:saved];
+        [added addObject:self.movie];
+        [defaults setObject:added forKey:@"savedMovies"];
+    }
+    else {
+        // delete movie from saved movies
+        NSArray *saved = [defaults objectForKey:@"savedMovies"];
+        NSMutableArray *movieRemoved = nil;
+        movieRemoved = [NSMutableArray arrayWithArray:saved];
+        [movieRemoved removeObject:self.movie];
+        [defaults setObject:movieRemoved forKey:@"savedMovies"];
+    }
+    [defaults synchronize];
 }
 
 /*

@@ -2,7 +2,7 @@
 
 **Flix** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -31,7 +31,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] User can browse popular movies in the collection view. 
+- [x] User can search for any movie in TMDB.
+- [x] User can favorite and view favorited movies. 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -51,6 +53,7 @@ GIF created with [EZGif.com](https://ezgif.com/).
 Describe any challenges encountered while building the app.
 - UIActivityIndicatorView was not displaying when fetching movie data because it was placed below the movie cells in the table, which did not show up on screen. 
 - UIActivityIndicatorView took up space in the view instead of popping up, which was resolved by moving it outside of the TableView. 
+- App crashed upon certain searches because some movies had null poster or backdrop links, which was resolved by checking if it was null.
 
 ## Credits
 

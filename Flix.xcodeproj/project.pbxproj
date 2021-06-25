@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701F58DE268682100017B8D7 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F58DD268682100017B8D7 /* FavoritesViewController.m */; };
 		703FF8832683D033000B3014 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF8822683D033000B3014 /* DetailsViewController.m */; };
 		709AC307268515C50098E392 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC306268515C50098E392 /* MoviesGridViewController.m */; };
 		709AC30A268517650098E392 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC309268517650098E392 /* MovieCollectionCell.m */; };
@@ -47,6 +48,8 @@
 		0911FC053C3ECA98F2CC30AD /* Pods-Flix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.debug.xcconfig"; path = "Target Support Files/Pods-Flix/Pods-Flix.debug.xcconfig"; sourceTree = "<group>"; };
 		123E7A0F675B4AD7C70A33C3 /* Pods_FlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58951B5DBDEBDDED38BD059C /* Pods_Flix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		701F58DC268682100017B8D7 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FavoritesViewController.h; path = Flix/FavoritesViewController.h; sourceTree = SOURCE_ROOT; };
+		701F58DD268682100017B8D7 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FavoritesViewController.m; path = Flix/FavoritesViewController.m; sourceTree = SOURCE_ROOT; };
 		703FF8812683D033000B3014 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		703FF8822683D033000B3014 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		709AC305268515C50098E392 /* MoviesGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesGridViewController.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		70BA3C6F26839C2500A2DF58 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				701F58DC268682100017B8D7 /* FavoritesViewController.h */,
+				701F58DD268682100017B8D7 /* FavoritesViewController.m */,
 				703FF8822683D033000B3014 /* DetailsViewController.m */,
 				703FF8812683D033000B3014 /* DetailsViewController.h */,
 				70BA3C6C26839B4700A2DF58 /* MoviesViewController.h */,
@@ -463,6 +468,7 @@
 				70BA3C6E26839B4700A2DF58 /* MoviesViewController.m in Sources */,
 				703FF8832683D033000B3014 /* DetailsViewController.m in Sources */,
 				709AC30A268517650098E392 /* MovieCollectionCell.m in Sources */,
+				701F58DE268682100017B8D7 /* FavoritesViewController.m in Sources */,
 				70BA3C4A2683902700A2DF58 /* main.m in Sources */,
 				70BA3C3C2683902600A2DF58 /* SceneDelegate.m in Sources */,
 				709AC307268515C50098E392 /* MoviesGridViewController.m in Sources */,

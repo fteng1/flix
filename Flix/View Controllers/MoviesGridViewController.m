@@ -98,14 +98,18 @@
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    self.movieSearchBar.showsCancelButton = YES;
+    searchBar.showsCancelButton = YES;
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    self.movieSearchBar.showsCancelButton = NO;
-    self.movieSearchBar.text = @"";
-    [self.movieSearchBar resignFirstResponder];
+    searchBar.showsCancelButton = NO;
+    searchBar.text = @"";
+    [searchBar resignFirstResponder];
     [self fetchMovies];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark - Navigation
@@ -137,6 +141,10 @@
         
         NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
         [cell.posterView setImageWithURL:posterURL];
+        cell.noPosterFoundLabel.text = @"";
+    }
+    else {
+        cell.noPosterFoundLabel.text = movie[@"title"];
     }
     
     return cell;
