@@ -10,9 +10,10 @@
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
 
-@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UISearchBar *movieSearchBar;
 
 @end
 
@@ -23,14 +24,16 @@
 
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.movieSearchBar.delegate = self;
     
     [self fetchMovies];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     
-    layout.minimumInteritemSpacing = 5;
-    layout.minimumLineSpacing = 5;
+    layout.minimumInteritemSpacing = 1;
+    layout.minimumLineSpacing = 1;
     
+    // number of posters per line depends on device size
     CGFloat postersPerLine = 2;
     CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing * (postersPerLine - 1)) / postersPerLine;
     CGFloat itemHeight = itemWidth * 1.5;
@@ -49,9 +52,8 @@
     }];
 }
 
-// fetch movies from the API to display
-- (void)fetchMovies {
-    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
+// makes request to argument url and retrieves movies
+- (void)getMovieResults:(NSURL *)url {
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -68,6 +70,42 @@
            }
        }];
     [task resume];
+}
+
+// searches movie database using provided query
+- (void)searchMovies:(NSString *)query {
+    NSURL *searchURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.themoviedb.org/3/search/movie?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&query=%@&page=1&include_adult=false", query]];
+    [self getMovieResults:searchURL];
+}
+
+// fetch popular movies from the API to display
+- (void)fetchMovies {
+    NSURL *popURL = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/popular?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"];
+    [self getMovieResults:popURL];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    // if there is text in the search bar, search and update movies
+    if (searchText.length != 0) {
+        [self searchMovies:searchText];
+    }
+    else {
+        [self fetchMovies];
+    }
+    
+    [self.collectionView reloadData];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.movieSearchBar.showsCancelButton = YES;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.movieSearchBar.showsCancelButton = NO;
+    self.movieSearchBar.text = @"";
+    [self.movieSearchBar resignFirstResponder];
+    [self fetchMovies];
 }
 
 #pragma mark - Navigation
@@ -89,11 +127,17 @@
     
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
-    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
     
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
-    [cell.posterView setImageWithURL:posterURL];
+    
+    // check if URL to poster image is null
+    if(![posterURLString isEqual:[NSNull null]])
+    {
+        NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+        
+        NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+        [cell.posterView setImageWithURL:posterURL];
+    }
     
     return cell;
 }

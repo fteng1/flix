@@ -47,13 +47,8 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               
-               NSLog(@"%@", dataDictionary);
-               
+                              
                self.movies = dataDictionary[@"results"];
-               for (NSDictionary *movie in self.movies) {
-                   NSLog(@"%@", movie[@"title"]);
-               }
                
                [self.tableView reloadData];
            }
@@ -94,7 +89,7 @@
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
     [cell.posterView.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [cell.posterView.layer setBorderWidth:3.0];
+    [cell.posterView.layer setBorderWidth:1.0];
     
     NSString *backdropURLString = movie[@"backdrop_path"];
     NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
@@ -118,7 +113,6 @@
     
     DetailsViewController *detailsViewController = [segue destinationViewController];
     detailsViewController.movie = movie;
-    NSLog(@"Tapping on a movie!");
 }
 
 
