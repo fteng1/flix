@@ -84,18 +84,18 @@
     [self getMovieResults:popURL];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
     // if there is text in the search bar, search and update movies
-    if (searchText.length != 0) {
-        [self searchMovies:searchText];
-    }
-    else {
-        [self fetchMovies];
-    }
-    
-    [self.collectionView reloadData];
-}
+//    if (searchText.length != 0) {
+//        [self searchMovies:searchText];
+//    }
+//    else {
+//        [self fetchMovies];
+//    }
+//
+//    [self.collectionView reloadData];
+//}
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     searchBar.showsCancelButton = YES;
@@ -109,6 +109,14 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    if (searchBar.text.length != 0) {
+        [self searchMovies:searchBar.text];
+    }
+    else {
+        [self fetchMovies];
+    }
+    
+    [self.collectionView reloadData];
     [searchBar resignFirstResponder];
 }
 

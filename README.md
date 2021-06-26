@@ -48,7 +48,7 @@ Now Playing:
 ![](https://i.imgur.com/7UsmrQq.gif)
 
 Browse:
-![](https://i.imgur.com/nalcNd2.gif)
+![](https://i.imgur.com/Od7TuXQ.gif)
 
 Favorites: 
 ![](https://i.imgur.com/dSrJjnF.gif)
